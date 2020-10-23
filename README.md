@@ -15,3 +15,30 @@ ALGORITHM IMPLEMENTATION
 				new_nodes := EXPAND(node,OPERATORS(problem))
 				nodes := QUEUEING_FN(nodes,new_nodes)
 			end  ```
+
+- BAND-WITH SEARCH:
+	``` function BREADTH_FIRST_SEARCH(problem) 
+		retorna	solucao ou falha
+		return GENERAL_SEARCH(problem,ENQUEUE_AT_END)  ```
+
+- DEPTH-SEARCH:
+	``` missing  ```
+
+- BIDIRECTIONAL:
+	``` missing ```
+
+## algClass.py
+
+This file is the core one, that have the class where we will write the needed methods.
+
+## example_1.py
+
+In every example we will import the main class from core file (algClass.py) ``` from algClass import magicBox ``` and use the methods we need to solve the problem.
+
+--------------------------------------------------------------------------------------------------------------
+# FROM HERE WE CAN PUT SOME TASKS TO START ON!
+###### example:
+- [ ] FIRST
+- [ ] SECOND
+
+(it is optional ofc)
