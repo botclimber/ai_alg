@@ -35,7 +35,7 @@ ALGORITHM IMPLEMENTATION
 
 This file is the core one, that have the class where we will write the needed methods.
 
-## example_1.py
+## 8puzzle.py
 
 In every example we will import the main class from core file (algClass.py) ``` from algClass import magicBox ``` and use the methods we need to solve the problem.
 
