@@ -14,8 +14,8 @@ sys.setrecursionlimit(10**4)
 
 class magicBox:
 
-	def __init__(self, i, j, iState, fState = 0):
-		self.cost = 5
+	def __init__(self, i, j, iState, fState = 0): # iState initial State, fState final State target
+		self.cost = 0 # number of state changes
 
 		self.rows = i
 		self.cols = j
@@ -27,14 +27,14 @@ class magicBox:
 	# METHOD TO CHANGE STATE
 
 		if np.array_equal(self.aState, self.fState):
-			return self.aState
+			return [[self.aState],[self.cost]]
 
-		past_zI = None
-		past_zJ = None
-		iCounter = 1
-		jCounter = 1
+		past_zI = None # save past i position
+		past_zJ = None # save past j position
 
-		# move to a valid position of matrix, check if position exists by knowing the border of matrix. Generates coordenates ij for new empty space
+		iCounter = 1 # when 1 increments i ,0 decrementes i
+		jCounter = 1 # when 1 increments j ,0 decrementes j
+
 		while np.array_equal(self.aState, self.fState) == False:
 			zIndex = np.where( self.aState == None ) # empty space current position
 
@@ -44,6 +44,7 @@ class magicBox:
 			zJ = zIndex[1][0]
 			zI = zIndex[0][0]
 
+			# move to a valid position of matrix, check if position exists by knowing the border of matrix. Generates coordenates ij for new empty space
 			if x:
 				if jCounter:
 					if zJ+1 < self.cols:
