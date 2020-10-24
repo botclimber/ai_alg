@@ -10,8 +10,6 @@ import numpy as np
 import random
 import sys
 
-sys.setrecursionlimit(10**4)
-
 class magicBox:
 
 	def __init__(self, i, j, iState, fState = 0): # iState initial State, fState final State target
